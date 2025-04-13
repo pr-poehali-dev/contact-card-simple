@@ -29,13 +29,13 @@ const ContactCard: React.FC<ContactCardProps> = ({
   className,
 }) => {
   return (
-    <Card className={className}>
+    <Card className={`hover:shadow-md transition-shadow duration-300 ${className}`}>
       <CardHeader className="flex flex-row items-center gap-4">
-        <Avatar className="h-14 w-14">
+        <Avatar className="h-14 w-14 border-2 border-primary/10">
           {avatarUrl ? (
             <AvatarImage src={avatarUrl} alt={name} />
           ) : (
-            <AvatarFallback className="text-lg">
+            <AvatarFallback className="text-lg bg-primary/5 text-primary">
               {name.split(" ").map(part => part[0]).join("").slice(0, 2).toUpperCase()}
             </AvatarFallback>
           )}
@@ -48,19 +48,19 @@ const ContactCard: React.FC<ContactCardProps> = ({
       <CardContent className="space-y-3">
         {phone && (
           <div className="flex items-center gap-2">
-            <Phone size={18} className="text-muted-foreground" />
+            <Phone size={18} className="text-primary/70" />
             <span>{phone}</span>
           </div>
         )}
         {email && (
           <div className="flex items-center gap-2">
-            <Mail size={18} className="text-muted-foreground" />
+            <Mail size={18} className="text-primary/70" />
             <span>{email}</span>
           </div>
         )}
         {address && (
           <div className="flex items-center gap-2">
-            <MapPin size={18} className="text-muted-foreground" />
+            <MapPin size={18} className="text-primary/70" />
             <span>{address}</span>
           </div>
         )}
