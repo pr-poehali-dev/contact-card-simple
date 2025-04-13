@@ -3,9 +3,9 @@ import ContactCard from "@/components/ContactCard";
 
 const IndexPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-indigo-950 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-red-950 to-red-800 py-12">
       <div className="container mx-auto max-w-5xl px-4">
-        <h1 className="text-3xl font-bold mb-10 text-center text-gray-100">Наши контакты</h1>
+        <h1 className="text-3xl font-bold mb-10 text-center text-red-50">Наши контакты</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           <ContactCard 
